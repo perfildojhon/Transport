@@ -1,10 +1,14 @@
+* {
+  font-family: "Segoe ", "Courier New", monospace;
+}
+
 body {
   background: #ccc;
 }
 
 header {
-  height: 40px;
   color: white;
+  height: 60px;
 }
 
 div.headline {
@@ -12,14 +16,54 @@ div.headline {
   left: 0;
   right: 0;
   position: fixed;
-  background: #333;
+  background: #444444;
 }
 
-article.app {
-  width: 90vw;
-  height: 100vh;
-  padding: 12px;
-  background: red;
+div.banner {
+  height: 60px;
+  display: inline-flex;
+}
+
+aside.travel-plan {
+  width: 35vw;
+  min-width: 483px;
+  min-height: 590px;
+  background: #E7E6E6;
+}
+
+article.content {
+  background: #004F16;
   margin-left: auto;
   margin-right: auto;
+  min-width: 480px;
+}
+
+div.search {
+  height: 250px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.label-placing {
+  text-align: center;
+  padding: 12px 0;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.label-placing h1.label {
+  font-family: "Helvetica", "Courier New", monospace;
+  padding: 6px;
+  margin: 12px;
+  font-size: 22px;
+}
+
+form.travel-plan-letter {
+
+}
+
+input#query {
+  width: 200px;
 }
