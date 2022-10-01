@@ -1,69 +1,30 @@
-* {
-  font-family: "Segoe ", "Courier New", monospace;
-}
-
-body {
-  background: #ccc;
-}
-
 header {
-  color: white;
-  height: 60px;
-}
-
-div.headline {
-  top: 0;
-  left: 0;
-  right: 0;
   position: fixed;
-  background: #444444;
+  z-index: 1;
+  top: 0;
+  height: 0;
+  right: 0;
+  background: #ccc;
+  width: 100vw;
+  height: 80px;
 }
 
-div.banner {
-  height: 60px;
-  display: inline-flex;
+main {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-aside.travel-plan {
-  width: 35vw;
-  min-width: 483px;
-  min-height: 590px;
-  background: #E7E6E6;
+aside.trip-details-conditions {
+
+  min-width: 499px;
+  height: 100%;
+  background: blue;
 }
 
-article.content {
-  background: #004F16;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 480px;
-}
+@media (max-width: 600px) {
 
-div.search {
-  height: 250px;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.label-placing {
-  text-align: center;
-  padding: 12px 0;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.label-placing h1.label {
-  font-family: "Helvetica", "Courier New", monospace;
-  padding: 6px;
-  margin: 12px;
-  font-size: 22px;
-}
-
-form.travel-plan-letter {
-
-}
-
-input#query {
-  width: 200px;
+  aside.trip-details-conditions {
+    background: red;
+  }
 }
