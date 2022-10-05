@@ -1,0 +1,30 @@
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 0;
+  right: 0;
+  background: #ccc;
+  width: 100vw;
+  height: 80px;
+}
+
+main {
+  z-index: 2  ;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside.trip-details-conditions {
+
+  min-width: 499px;
+  height: 100%;
+  background: blue;
+}
+
+@media (max-width: 600px) {
+
+  aside.trip-details-conditions {
+    background: red;
+  }
+}

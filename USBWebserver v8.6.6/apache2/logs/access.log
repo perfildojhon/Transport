@@ -1,0 +1,11 @@
+::1 - - [05/Oct/2022:19:14:36 -0300] "GET / HTTP/1.1" 200 78550
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/header.png HTTP/1.1" 200 7766
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /style.css HTTP/1.1" 200 3041
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/background.jpg HTTP/1.1" 200 12386
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/menuleft.jpg HTTP/1.1" 200 11236
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/topcontent.jpg HTTP/1.1" 200 11578
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/menu.jpg HTTP/1.1" 200 11219
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/content.jpg HTTP/1.1" 200 11916
+::1 - - [05/Oct/2022:19:14:37 -0300] "GET /images/menuright.jpg HTTP/1.1" 200 11239
+::1 - - [05/Oct/2022:19:14:38 -0300] "GET /images/banner.jpg HTTP/1.1" 200 42876
+::1 - - [05/Oct/2022:19:14:38 -0300] "GET /favicon.ico HTTP/1.1" 404 196
