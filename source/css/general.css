@@ -1,0 +1,40 @@
+header {
+
+  background: #ccc;
+  height: 80px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+}
+
+aside.trip-details-conditions {
+  box-sizing: border-box;
+  width: 30vw;
+  height: 100vh;
+  min-width: 480px;
+  background: blue;
+}
+
+div.roadmap-visualiser {
+  background: green;
+  min-width: 70vw;
+  box-sizing: content-box;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+
+  main {
+
+    flex-flow: column;
+  }
+
+  aside.trip-details-conditions {
+      height: 30vh;
+    width: 100%;
+    background: red;
+  }
+}
