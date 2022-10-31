@@ -1,3 +1,7 @@
+body {
+  background: 
+}
+
 header {
   height: 60px;
 }
@@ -37,7 +41,7 @@ div.user-conditions-definitions {
 }
 
 div.map {
-  background: blue;
+  background: green;
   width: 60%;
   flex-grow: 1;
 }
