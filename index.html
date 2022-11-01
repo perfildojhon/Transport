@@ -11,20 +11,47 @@
   <body>
     <header>
       <div class="headline">
-        <div class="heading">
-          title
+        <div class="banner">
+          <div class="brand">
+            <h1>Transport</h1>
+          </div>
+          <div class="user-content">
+            <img id="profile-picture" src="profile.jpg" alt="profile picture" width="40" height="40">
+            <h2 id="username">Alisson Vue</h2>
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <aside class="user-trip-conditions">
-        <div class="user-conditions-definitions">
-          form
-        </div>
-      </aside>
-      <div class="map">
-        área de mapa
-      </div>
+      <article class="content">
+        <aside class="trip-details-planner">
+          <div class="trip-details-conditions">
+            <div class="trip-conditions">
+              <div class="label-placing">
+                <h1 class="label">Plano de Viagem</h1>
+              </div>
+              <div class="search">
+
+                <form class="travel-plan-letter" action="index.html" method="post">
+
+                  <label for="trip-start-condition">Partida</label>
+                  <input id="trip-start-condition" type="search" name="search" placeholder="Qual o seu endereço de origem?">
+
+                  <label for="trip-arrival-condition">Destino</label>
+                  <input id="trip-arrival-condition" type="search" name="search" placeholder="Pra onde você quer ir?" >
+
+                  <input id="submit-trip" type="submit" name="search" value="confirmar">
+                </form>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section class="placeholder-map-area">
+          <div class="map-placer">
+
+          </div>
+        </section>
+      </article>
     </main>
   </body>
 </html>
