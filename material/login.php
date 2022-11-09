@@ -33,7 +33,7 @@
 
 					//consultar no banco de dadps
 					$email =filter_input(INPUT_POST, 'email_cad',FILTER_SANITIZE_EMAIL);//Remove todos caracteres, exceto letras, números e !#$%&'*+-=?^_`{|}~@.[].
-					$senha = $_POST['senha_cad'];
+					$senha = md5($_POST['senha_cad']);
 	
 
 

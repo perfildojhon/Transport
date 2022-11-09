@@ -33,7 +33,8 @@
 				$endereco=mysqli_escape_string($connect,$_POST['End_cad']);
 				$dataDeNascimento=mysqli_escape_string($connect,$_POST['Dat_cad']);
 				
-		
+				$senha = md5($senha);
+				
 				$sql= "INSERT INTO usuario(nomUser,dateNascm,dscEmail,numCPF,sobrenome,dscRaschSenhas,endereco) VALUES ('$nome','$dataDeNascimento','$email','$CPF','$sobrenome','$senha','$endereco')";
 				
 				if(mysqli_query($connect,$sql)):
