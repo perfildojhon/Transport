@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="source/css/reset.css">
     <title>Home</title
   </head>
-  <body>
+  <body onload="menu()">
     <!-- Header Banner -->
     <header>
       <!-- Headline: Container que representa o conteúdo de Header -->
@@ -29,7 +29,7 @@
                   </div>
                   <h2>Name Lastname</h2>
                 </div>
-                <nav>
+                <nav id="menu">
                   <ul>
                     <li>
                       <button type="button" name="button" onclick="gotToHistory()"> Histórico de Viagem </button>
@@ -80,25 +80,22 @@
       </article>
     </main>
   </body>
-  <script type="text/javascript">
-
-    menuIsVisible = false;
-
+  <script>
+  
     function menu() {
 
-      console.log("clicou");
+      menuIsVisible = true;
 
       if (menuIsVisible) {
 
+        document.getElementById('menu').style.display = "none";
         menuIsVisible = false;
 
       } else {
 
+        document.getElementById('menu').style.display = "block";
         menuIsVisible = true;
       }
-
-      console.log("foi mudado para ", menuIsVisible);
     }
-
   </script>
 </html>
