@@ -59,29 +59,88 @@ div.brand {
 text-align: center;
 margin-top: auto;
 margin-bottom: auto;
-padding: 16px;
+padding-top: 16px;
 }
 
-div.brand h1 {
-color: #444;
-font-weight: 600;
-font-size: 24px;
+h1#label-brand-website {
+  color: #444;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 div.profile {
-width: 160px;
+width: 180px;
 position: fixed;
 right: 0;
-padding: 0 1.6em;
+margin-top: auto;
+margin-left: auto;
 }
 
 div.hatch {
-display: flex;
-align-items: center;
-height: 60px;
-justify-content: space-between;
-font-size: 0.8em
+
+  display: inline;
+  position: absolute;
 }
+
+div.hatch nav:hover {
+  /* display: inline; */
+}
+
+div.hatch nav{
+  /* display: none; */
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #a9a8a8;
+  border-radius: 2px;
+  position: relative;
+}
+
+nav ul li {
+  text-align: center;
+  height: 20px;
+  border-radius: 2px;
+  background: #f2f2f2;
+  margin: 2px;
+  padding: 4px;
+  font-size: 0.8em;
+  border: 1px solid #E9E9E9;
+}
+
+nav ul li:hover, li:active, li:focus {
+  background-color: #ecdbfd;
+  border: 1px solid #d9d9d9;
+}
+
+ul li button {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+ul li button a {
+  color: #09F;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul li button a:visited {
+  color: #d75900;
+}
+
+div.user-button-area {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f2f2f2;
+  font-size: 0.8em;
+  FONT-WEIGHT: 500;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+div.user-button-area:hover, div.user-button-area:active {
+  border: 1px solid #333;
+}
+
 
 div.pic {
 
@@ -146,7 +205,7 @@ div.search {
 align-items: center;
 }
 
-div.label-placing {
+div.trip-label-area {
 
   text-align: center;
   padding: 12px 0;
@@ -154,7 +213,7 @@ div.label-placing {
   margin-right: auto;
 }
 
-div.label-placing h1.label {
+h1#label-trip-planner {
 
   padding: 6px;
   margin: 12px;
@@ -169,8 +228,6 @@ form.travel-plan-letter {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 0.22em;
-  /* align-items: center; */
-  /* text-align: center; */
 }
 
 section.placeholder-map-area {

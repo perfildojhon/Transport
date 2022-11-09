@@ -18,15 +18,27 @@
         <div class="headcast">
           <div class="brandline">
             <div class="brand">
-              <h1 id="label">Transport</h1>
+              <h1 id="label-brand-website">Transport</h1>
             </div>
 
             <div class="profile">
-              <div class="hatch">
-                <div class="pic">
-                  <img id="miniature" src="profile.jpg" alt="Profile picture" width="35" height="35">
+              <div class="hatch" onclick="interactMenu()">
+                <div class="user-button-area">
+                  <div class="pic">
+                    <img id="miniature" src="profile.jpg" alt="Profile picture" width="35" height="35">
+                  </div>
+                  <h2>Name Lastname</h2>
                 </div>
-                <h2>Name Lastname</h2>
+                <nav>
+                  <ul>
+                    <li>
+                      <button type="button" name="button" onclick="gotToHistory()"> Histórico de Viagem </button>
+                    </li>
+                    <li>
+                      <button type="button" name="button" onclick="logout()"> sair </button>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
@@ -38,8 +50,8 @@
         <aside class="trip-details-planner">
           <div class="trip-details-conditions">
             <div class="trip-conditions">
-              <div class="label-placing">
-                <h1 class="label">Plano de Viagem</h1>
+              <div class="trip-label-area">
+                <h1 id="label-trip-planner">Plano de Viagem</h1>
               </div>
               <div class="search">
 
@@ -68,4 +80,23 @@
       </article>
     </main>
   </body>
+  <script type="text/javascript">
+
+    menuIsVisible = false;
+
+    function interactMenu() {
+
+      if (menuIsVisible) {
+
+        menuIsVisible = false;
+
+      } else {
+
+        menuIsVisible = true;
+      }
+
+      console.log("foi mudado para ", menuIsVisible);
+    }
+
+  </script>
 </html>
