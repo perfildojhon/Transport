@@ -39,6 +39,17 @@ session_start();
                     echo $_SESSION['nome'];
                   ?>
                 </h2>
+                </h2>
+                <nav>
+                  <ul>
+                    <li>
+                      <button type="button" name="button" onclick="gotToHistory()"> Histórico de Viagem </button>
+                    </li>
+                    <li>
+                      <button type="button" name="button" onclick="logout()"> sair </button>
+                    </li>
+                  </ul>
+                </nav>
                 <a href=logout.php>Sair</a>
               </div>
             </div>
