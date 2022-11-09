@@ -46,11 +46,12 @@ session_start();
                       <button type="button" name="button" onclick="gotToHistory()"> Histórico de Viagem </button>
                     </li>
                     <li>
-                      <button type="button" name="button" onclick="logout()"> sair </button>
+                      <form action="logout.php" method="post">
+                        <input type="submit" name="button" value="Sair"></input>
+                      </form>
                     </li>
                   </ul>
                 </nav>
-                <a href=logout.php>Sair</a>
               </div>
             </div>
           </div>
