@@ -22,7 +22,7 @@
             </div>
 
             <div class="profile">
-              <div class="hatch" onclick="interactMenu()">
+              <div class="hatch" onclick="menu()">
                 <div class="user-button-area">
                   <div class="pic">
                     <img id="miniature" src="profile.jpg" alt="Profile picture" width="35" height="35">
@@ -84,7 +84,9 @@
 
     menuIsVisible = false;
 
-    function interactMenu() {
+    function menu() {
+
+      console.log("clicou");
 
       if (menuIsVisible) {
 
