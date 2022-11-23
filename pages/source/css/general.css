@@ -1,286 +1,0 @@
-/* Set das propriedades de todos os elementos do document */
-
-* {
-
-  font-size: 1.1em;
-}
-
-/* Set do Body */
-body {
-
-  background: #ccc;
-}
-
-/* Sets do container principal da página */
-
-main {
-
-  height: 100%;
-}
-
-/* Grupo de elementos da Header */
-
-header {
-  z-index: 4;
-  height: 60px;
-  -webkit-user-select: none;
-}
-
-div.headline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-div.headcast {
-
-  z-index: 4;
-  width: 100%;
-  background: #f2f2f2;
-  border-bottom: 1px solid #e9e9e9;
-}
-
-div.brandline {
-display: flex;
-flex-flow: row;
-flex-direction: row;
-justify-content: space-between;
-height: 60px;
-}
-
-div.brand {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-align-items: baseline;
-text-align: center;
-margin-top: auto;
-margin-bottom: auto;
-padding-top: 16px;
-}
-
-h1#label-brand-website {
-  color: #444;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-div.profile {
-width: 180px;
-position: fixed;
-right: 0;
-margin-top: auto;
-margin-left: auto;
-}
-
-div.hatch {
-
-  display: inline;
-  position: absolute;
-}
-
-div.hatch nav:hover {
-  /* display: inline; */
-}
-
-div.hatch nav{
-  /* display: none; */
-  padding: 2px;
-  background: #fff;
-  border: 1px solid #a9a8a8;
-  border-radius: 2px;
-  position: relative;
-}
-
-nav ul li {
-  text-align: center;
-  height: 20px;
-  border-radius: 2px;
-  background: #f2f2f2;
-  margin: 2px;
-  padding: 4px;
-  font-size: 0.8em;
-  border: 1px solid #E9E9E9;
-}
-
-nav ul li:hover, li:active, li:focus {
-  background-color: #ecdbfd;
-  border: 1px solid #d9d9d9;
-}
-
-ul li button {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-ul li button a {
-  color: #09F;
-  text-align: center;
-  text-decoration: none;
-}
-
-ul li button a:visited {
-  color: #d75900;
-}
-
-div.user-button-area {
-  display: flex;
-  align-items: center;
-  border: 1px solid #f2f2f2;
-  font-size: 0.8em;
-  FONT-WEIGHT: 500;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-div.user-button-area:hover, div.user-button-area:active {
-  border: 1px solid #333;
-}
-
-
-div.pic {
-
-  padding: 6px;
-}
-
-img#miniature {
-
-  border-radius: 25px;
-}
-
-/* Grupo de conjuntos dos conteúdos da aplicação */
-
-article.content {
-
-  /* background: #004F16; */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 6px;
-  height: 100%;
-}
-
-/* Conjunto dos elementos do Planejador de Viagem */
-
-aside.trip-details-planner {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-
-div.trip-details-conditions {
-width: 20vw;
-min-width: 370px;
-z-index: 0;
-height: 100%;
-font-size: .9em;
-background: #e9e9e9;
-text-align: left;
-align-items: center;
-}
-
-div.trip-conditions {
-  padding-top: 6em;
-  text-align: center;
-}
-
-div.headline, div.trip-details-conditions {
-
-  /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
-}
-
-div.search {
-height: 250px;
-margin-left: auto;
-margin-right: auto;
-align-items: center;
-}
-
-div.trip-label-area {
-
-  text-align: center;
-  padding: 12px 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1#label-trip-planner {
-
-  padding: 6px;
-  margin: 12px;
-  font-size: 22px;
-}
-
-form.travel-plan-letter {
-  display: inline-grid;
-  flex-wrap: wrap;
-  grid-gap: 12px;
-  background: #fff;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 0.22em;
-}
-
-section.placeholder-map-area {
-}
-
-form.travel-plan-letter label {
-  padding: 8px;
-}
-
-form.travel-plan-letter  input {
-  width: 310px;
-}
-
-input#trip-arrival-condition, input#trip-start-condition {
-
-  border: none;
-  border-bottom: 1px solid #777;
-  height: 35px;
-}
-
-input#submit-trip {
-  width: 120px;
-  height: 40px;
-  margin: auto;
-  padding: 6px;
-  background: #222;
-  border: 1px solid #111;
-  border-radius: 2px;
-  color: white;
-  font-weight: bold;
-}
-
-input#cancel-trip {
-background: #BF0000;
-border: 1px solid #870000;
-border-radius: 3px;
-width: 93px;
-margin: auto;
-padding: 2px;
-height: 35px;
-color: white;
-font-weight: bolder;
-}
-
-/* Conjunto dos Mapas de Navegação */
-
-
-/* Controles do viewport e Media Query*/
-
-@media only screen and (max-width: 750px) {
-  /* Breakpoint caso a tela ficar menor que 750px (tablet) */
-  div.trip-details-conditions {
-
-    width: auto;
-  }
-}
