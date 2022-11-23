@@ -46,11 +46,11 @@ session_start();
                       <button type="button" name="button" onclick="gotToHistory()"> Histórico de Viagem </button>
                     </li>
                     <li>
+                    <form action="telaPrincipal.php" method="post">
+                        <input type="submit" name="button" value="Voltar"></input>
+                      </form>
                       <form action="logout.php" method="post">
                         <input type="submit" name="button" value="Sair"></input>
-                      </form>
-                      <form action="telaExportacaoDados.php" method="post">
-                        <input type="submit" name="button" value="Exportacao de Dados"></input>
                       </form>
                     </li>
                   </ul>
@@ -62,38 +62,55 @@ session_start();
       </div>
     </header>
     <main>
-      <article class="content">
-        <aside class="trip-details-planner">
-          <div class="trip-details-conditions">
-            <div class="trip-conditions">
-              <div class="label-placing">
-                <h1 class="label">Plano de Viagem</h1>
-              </div>
-              <div class="search">
-
-                <form class="travel-plan-letter" action="index.html" method="post">
-
-                  <label for="trip-start-condition">Partida</label>
-                  <input id="trip-start-condition" type="search" name="search" placeholder="Qual o seu endereço de origem?">
-
-                  <label for="trip-arrival-condition">Destino</label>
-                  <input id="trip-arrival-condition" type="search" name="search" placeholder="Pra onde você quer ir?" >
-
-                  <input id="submit-trip" type="submit" name="search" value="confirmar">
-
-                  <input id="cancel-trip" type="button" name="cancel" value="cancelar">
-                </form>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <section class="placeholder-map-area">
-          <div class="map-placer">
-            
-          </div>
-        </section>
-      </article>
+        
+        <?php
+        if(isset($_SESSION['msg'])){
+          echo $_SESSION['msg'];
+          unset($_SESSION['msg']);
+        }
+        ?>
+        <div>
+            <h1 id="titulo">Exporte Arquivo</h1>
+            <p id="subtitulo">Exporte os arquivos de rotas e pontos para o banco de dados</p>
+            <br>
+        </div>
+          <div class=container>        
+            <fieldset class="grupo">
+                <div class="campo">
+                    <form method="POST" action="processaPontos.php" enctype="multipart/form-data">
+                        <label class="nome"><strong>Exporte arquivo de "PONTOS"</strong></label>
+                        <br>  
+                        <input type="file" name="arquivo" id="nome"><br><br>
+                    
+                        <input class="botao" type="submit" value="Importar">
+                    </form>
+                    <br>
+                    <br>
+                    <form method="POST" action="processaRotas.php" enctype="multipart/form-data">
+                        <label class="nome"><strong>Exporte arquivo de "ROTAS"</strong></label>
+                        <br>  
+                        <input type="file" name="arquivo" id="nome"><br><br>
+                    
+                        <input class="botao" type="submit" value="Importar">
+                    </form>
+                </div>            
+            </fieldset>
+          </div>           
     </main>
   </body>
 </html>
+<style>
+
+#titulo{
+  text-align: center;
+}
+#subtitulo{
+  text-align: center; 
+}
+.container { 
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    border : 2px; 
+}  
+</style>
