@@ -9,6 +9,7 @@
 body {
 
   background: #ccc;
+  
 }
 
 /* Sets do container principal da página */
@@ -286,3 +287,5 @@ font-weight: bolder;
     width: auto;
   }
 }
+
+/*ESTILIZACAO DA TELA DE EXPORTACAO*/
