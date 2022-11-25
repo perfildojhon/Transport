@@ -1,9 +1,12 @@
 <?php
 
-  if (isset($_SESSION['email_cad']) && $_SESSION['email_cad'] != null) {
+echo var_dump(session_status());
 
-    header('location: /login/index.php?erro=true');
-  exit;
-}
+//   if (session_status() == 2) {
+//
+//     header('location: /login/index.php?erro=true');
+//   exit;
+// }
+// echo session_status();
 // header('location: /logout');
 ?>
