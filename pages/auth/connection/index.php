@@ -1,9 +1,7 @@
 <?php
-  // Construcao da Conexao com banco de dados via PDO
-  $hostname = "localhost"; // Endereço do servidor
-  $charset = 'utf8mb4';
-  $db="mydb"; // database
-  $dsn = "mysql:host=$hostname;dbname=$db; charset=$charset"; // construcao do DSN
+  // requer variáveis de ambiente
+    // se falhar, crie um arquivo com as variaveis de ambiente em env/variables.php;
+  require_once('../env/variables.php');
   // opcoes do PDO
   $options = [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -11,12 +9,10 @@
       PDO::ATTR_EMULATE_PREPARES   => false,
   ];
   // Autentificacao com o servidor
-  $username="root"; // precisa ser isolado como variavel de ambiente
-  $password="serra"; // precisa ser isolado como variavel de ambiente
   // Tabela a se acessar
   $table="session";
   // Mensagem Padrao
-  $message="Sem conexão com o servidor.";
+  $message="Sem conexão com o servidor."; // mensagem padrao de resposta
 
   //pdo - somente orientado objeto
   try {

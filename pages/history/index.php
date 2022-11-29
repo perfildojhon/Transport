@@ -121,6 +121,116 @@
                   </div>
                 </div>
               </li>
+              <li class="trip-details">
+                <div class="trip-detail-inline">
+                  <div class="trip-destinations-details">
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Partida}</h2>
+                    </div>
+                    <span> para </span>
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Destino}</h2>
+                    </div>
+                  </div>
+                  <div class="trip-date-details">
+                    <div class="date-detail trip-data-information">
+                      <h2>{datetime}</h2>
+                    </div>
+                    <span> as </span>
+                    <div class="date-detail trip-time-information">
+                      <h2>{time}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="trip-details">
+                <div class="trip-detail-inline">
+                  <div class="trip-destinations-details">
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Partida}</h2>
+                    </div>
+                    <span> para </span>
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Destino}</h2>
+                    </div>
+                  </div>
+                  <div class="trip-date-details">
+                    <div class="date-detail trip-data-information">
+                      <h2>{datetime}</h2>
+                    </div>
+                    <span> as </span>
+                    <div class="date-detail trip-time-information">
+                      <h2>{time}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="trip-details">
+                <div class="trip-detail-inline">
+                  <div class="trip-destinations-details">
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Partida}</h2>
+                    </div>
+                    <span> para </span>
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Destino}</h2>
+                    </div>
+                  </div>
+                  <div class="trip-date-details">
+                    <div class="date-detail trip-data-information">
+                      <h2>{datetime}</h2>
+                    </div>
+                    <span> as </span>
+                    <div class="date-detail trip-time-information">
+                      <h2>{time}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="trip-details">
+                <div class="trip-detail-inline">
+                  <div class="trip-destinations-details">
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Partida}</h2>
+                    </div>
+                    <span> para </span>
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Destino}</h2>
+                    </div>
+                  </div>
+                  <div class="trip-date-details">
+                    <div class="date-detail trip-data-information">
+                      <h2>{datetime}</h2>
+                    </div>
+                    <span> as </span>
+                    <div class="date-detail trip-time-information">
+                      <h2>{time}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="trip-details">
+                <div class="trip-detail-inline">
+                  <div class="trip-destinations-details">
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Partida}</h2>
+                    </div>
+                    <span> para </span>
+                    <div class="destination-detail trip-origin-data">
+                      <h2>{Destino}</h2>
+                    </div>
+                  </div>
+                  <div class="trip-date-details">
+                    <div class="date-detail trip-data-information">
+                      <h2>{datetime}</h2>
+                    </div>
+                    <span> as </span>
+                    <div class="date-detail trip-time-information">
+                      <h2>{time}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
           </div>

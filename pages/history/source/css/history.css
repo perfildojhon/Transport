@@ -19,6 +19,7 @@ div.history-list {
   /*  */
   height: 100%;
   align-items: center;
+  position: fixed;
 }
 
 div.trip-details {
@@ -29,10 +30,6 @@ div.trip-details {
 ul.trip-list {
   /*  */
   height: 100%;
-  /* position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0; */
 }
 
 ul.trip-list li {

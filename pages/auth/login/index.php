@@ -61,22 +61,43 @@
 						$_SESSION['usermail'] =  $value['email'];
 						$_SESSION['user_id'] = $value['ID'];
 						//
-						if(isset($_SESSION['user_id']) && $_SESSION['user_id'] !== $value['ID']):
+						if(isset($_SESSION['user_id']) && $_SESSION['user_id'] !== $value['ID']) {
 							//
 							$_SESSION['user_acess_status'] == "already connected";
-						endif;
+						}
 					}
 				endif;
 				//
+
+				//
 				if ($_SESSION['user_acess_status'] = "connected"):
 					// code...
+					$table_user = "usuario";
+					$field_name = "dscEmail";
+					// captura no banco de dados o ID do Usuario que está logando
+					$current_user = ("SELECT idUser as ID FROM $table_user where $field_name = $email");
+					// consulta o banco de dados e executa a query
+					$find_user = $connection->query($current_user);
+					// faz o fetch dos dados, transformando o objeto PDO result em Array
+					$fetch_user = $current -> fetchAll();
+					//
+					foreach ($fetch_user as $user => $value) {
+						// o campo var de $value['>var<'] presisa ser o mesmo nome da coluna da tabela
+							// ou o alias informado no SELECT > SELECT column_name as >alias< ...
+						$user_id = $value['ID'];
+						//
+						if(isset($_SESSION['user_id']) && $_SESSION['user_id'] !== $value['ID']) {
+							//
+							$_SESSION['user_acess_status'] == "already connected";
+						}
+					}
+					//
 					$sql = "INSERT INTO $table(user_id, session_dsc, session_active) values(2, '$current_session', true);";
 					$send = $connection->query($sql);
-					header('location: /home');
+					header('location: /home' );
 				else:
 					header('location: /login');
 				endif;
-
 			}
 		?>
 		<main>
