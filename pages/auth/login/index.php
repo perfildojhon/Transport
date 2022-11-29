@@ -92,7 +92,7 @@
 						}
 					}
 					//
-					$sql = "INSERT INTO $table(user_id, session_dsc, session_active) values(2, '$current_session', true);";
+					$sql = "INSERT INTO $table(user_id, session_dsc, session_active) values($user_id, '$current_session', true);";
 					$send = $connection->query($sql);
 					header('location: /home' );
 				else:
