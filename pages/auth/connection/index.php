@@ -1,7 +1,7 @@
 <?php
   // requer variáveis de ambiente
     // se falhar, crie um arquivo com as variaveis de ambiente em env/variables.php;
-  require_once('../env/variables.php');
+  require_once('env/variables.php');
   // opcoes do PDO
   $options = [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
