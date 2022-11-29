@@ -75,11 +75,11 @@
 					$table_user = "usuario";
 					$field_name = "dscEmail";
 					// captura no banco de dados o ID do Usuario que está logando
-					$current_user = ("SELECT idUser as ID FROM $table_user where $field_name = $email");
+					$current_user = ("SELECT idUser as ID FROM $table_user where $field_name = '$email'");
 					// consulta o banco de dados e executa a query
 					$find_user = $connection->query($current_user);
 					// faz o fetch dos dados, transformando o objeto PDO result em Array
-					$fetch_user = $current -> fetchAll();
+					$fetch_user = $find_user->fetchAll();
 					//
 					foreach ($fetch_user as $user => $value) {
 						// o campo var de $value['>var<'] presisa ser o mesmo nome da coluna da tabela
