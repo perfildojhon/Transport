@@ -4,13 +4,19 @@
     <meta charset="utf-8" content="text/html">
     <meta name="keywords" content="Faça viagens mais rápido.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="source/css/general.css">
-    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="/common/source/css/general.css">
+    <link rel="stylesheet" href="/common/source/css/reset.css">
+    <link rel="stylesheet" href="source/css/history.css">
     <title>Histórico de Viagens</title>
   </head>
   <body>
-    <?php session_start();
-    include('auth.php');
+    <?php
+      // inicia uma sessao ou resume a sessao existente
+      session_start();
+
+      if(!isset($_SESSION['username']) && isset($_SESSION['user_acess_status']) && $_SESSION['user_acess_status'] !== "connected"):
+        require_once("../auth/index.php");
+      endif;
     ?>
     <header>
       <div class="headline">
@@ -22,16 +28,16 @@
             <div class="navigation-painel" onclick="ChangePopupState()">
               <div class="user-profile-data">
                 <div class="profile-picture">
-                  <img src="media/profile.jpg" alt="picture" width="35" height="35" style="border-radius: 35px;">
+                  <img src="/common/media/profile.jpg" alt="picture" width="35" height="35" style="border-radius: 35px;">
                 </div>
                 <div class="username-placer">
-                  <h2 id="username"><?php echo $_SESSION['nome']; ?></h2>
+                  <h2 id="username"><?php echo $_SESSION['username']; ?></h2>
                 </div>
               </div>
             </div>
             <div class="navigation-menu" id="navigation" hidden>
               <ul id="navigation-topics">
-                <li id="option_two" onclick="location.href='/logout'"> sair </li>
+                <li id="option_two" onclick="location.href='/auth/logout'"> sair </li>
               </ul>
             </div>
           </div>
@@ -43,7 +49,11 @@
       <!--  -->
       <aside class="side-panel">
         <div class="user-trip-histories">
-          <div class="history-list">
+          <div class="trip-label-placer">
+            <h3 id="trip-label-item">Histórico de Viagem</h3>
+          </div>
+          <div class="trip-history-list">
+            <div class="history-list">
             <ul class="trip-list">
               <li class="trip-details">
                 <div class="trip-detail-inline">
@@ -112,6 +122,7 @@
                 </div>
               </li>
             </ul>
+          </div>
           </div>
         </div>
       </aside>

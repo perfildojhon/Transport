@@ -1,0 +1,105 @@
+main {
+  /*  */
+  display: flex;
+  margin: 1em;
+}
+
+article {
+  /*  */
+  width: 100%;
+  margin: 1em;
+  align-items: center;
+  /* text-align: center; */
+}
+
+div.transfer {
+  width: 55vw;
+  /*  */
+  border: 1px solid #444;
+  /* margin: 0 10vw; */
+  margin-left: auto;
+  margin-right: auto;
+  background: #e2e2e2;
+}
+
+nav.select-mode {
+  width: 100%;
+}
+
+nav.select-mode ul {
+  /*  */
+  margin: 0.5em;
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+nav.select-mode ul li {
+  border: 1px solid #666;
+  border-radius: 2px;
+  text-align: center;
+  height: 35px;
+  width: 45%;
+  margin: 1%;
+  background: #F9F9F9;
+}
+
+li button {
+  /*  */
+  width: 100%;
+  height: 100%;
+}
+
+li button h2 {
+  //
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  user-select: none;
+  --webkit-user-select: none;
+  /* margin: 0.5em; */
+}
+
+div.lead {
+  /*  */
+  padding: 12px;
+}
+
+div.lead p {
+  /*  */
+  padding: 6px;
+  font-size: 18px;
+}
+
+h1#titulo {
+  /*  */
+  padding: 6px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: verdana, sans-serif;
+  font-stretch: extra-expanded;
+}
+
+form.as_stops {
+
+}
+
+form.as_stops fieldset {
+  /*  */
+  padding: 6px;
+}
+
+form.as_stops fieldset label {
+  /*  */
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 2px;
+  padding: 2px;
+}
+
+form.as_stops fieldset input {
+  /*  */
+  width: 100%;
+  padding: 1em 2px;
+  /* background: red; */
+}

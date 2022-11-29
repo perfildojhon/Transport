@@ -1,0 +1,81 @@
+aside.side-panel {
+  /*  */
+  width: 30vw;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; */
+  background: #E6E6E6;
+}
+
+div.user-trip-histories {
+  /*  */
+  background: #a1a1a1;
+  margin: 22% 0;
+  height: inherit;
+}
+
+div.history-list {
+  /*  */
+  height: 100%;
+  align-items: center;
+}
+
+div.trip-details {
+  /*  */
+  user-select: none;
+}
+
+ul.trip-list {
+  /*  */
+  height: 100%;
+  /* position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0; */
+}
+
+ul.trip-list li {
+  /*  */
+  background: #cbcbcb;
+  margin: 1px;
+  padding: 4px;
+  border: 1px solid #666;
+  border-radius: 2px;
+}
+
+ul.trip-list li:hover, ul.trip-list li:focus,
+ul.trip-list li:active {
+  /*  */
+  background: #b8b8b8;
+}
+
+div.trip-destinations-details, div.trip-date-details {
+  margin: 2px;
+  display: flex;
+  gap: 4px;
+}
+
+div.trip-destinations-details {
+  /*  */
+  padding: 2px;
+}
+
+div.destination-detail, div.trip-destinations-details span {
+  /*  */
+  margin: 2px;
+  font-size: 1.2pc;
+}
+
+div.trip-date-details {
+  /*  */
+  margin: 0.8em 2em;
+}
+
+@media only screen and (max-width: 750px) {
+  /* Breakpoint caso a tela ficar menor que 750px (tablet) */
+  h1#brandpage {
+    /*  */
+    font-size: 1.2em;
+  }
+}

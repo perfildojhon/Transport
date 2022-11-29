@@ -4,28 +4,44 @@
     <meta charset="utf-8" content="text/html">
     <meta name="keywords" content="Faça viagens mais rápido.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="source/css/general.css">
-    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="/common/source/css/reset.css">
+    <link rel="stylesheet" href="/common/source/css/general.css">
+    <link rel="stylesheet" href="/common/source/css/home.css">
     <title>Home</title>
   </head>
-  <?php session_start();
-  include('auth.php');
+  <?php
+    //
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    if(!isset($_SESSION['username']) && isset($_SESSION['user_acess_status']) && $_SESSION['user_acess_status'] !== "connected"):
+      require_once("../auth/index.php");
+    endif;
   ?>
   <body>
     <header>
       <div class="headline">
         <div class="banner">
           <div class="brandline">
-            <h1 id="brandpage" onclick="location.href='/home'"">Transport</h1>
+            <h1 id="brandpage" onclick="location.href='/home'">Transport</h1>
           </div>
           <div class="user-agent-navigation">
             <div class="navigation-painel" onclick="ChangePopupState()">
               <div class="user-profile-data">
                 <div class="profile-picture">
-                  <img src="media/profile.jpg" alt="picture" width="35" height="35" style="border-radius: 35px;">
+                  <img src="/common/media/profile.jpg" alt="picture" width="35" height="35" style="border-radius: 35px;">
                 </div>
                 <div class="username-placer">
-                  <h2 id="username"><?php echo $_SESSION['nome']; ?></h2>
+                  <h2 id="username">
+                    <?php
+                      if(isset($_SESSION['username'])):
+                        echo $_SESSION['username'];
+                      else:
+                        echo "username";
+                      endif;
+                    ?>
+                  </h2>
                 </div>
               </div>
             </div>
@@ -33,7 +49,7 @@
               <ul id="navigation-topics">
                 <li id="option_one" onclick="location.href='/history'"> Histórico de Viagem </li>
                 <li id="option_one" onclick="location.href='/export'"> Exportar Arquivo </li>
-                <li id="option_two" onclick="location.href='logout.php'"> sair </li>
+                <li id="option_two" onclick="location.href='/auth/logout'"> sair </li>
               </ul>
             </div>
           </div>
@@ -67,7 +83,6 @@
       </aside>
 
       <div class="roudmap-placer">
-
       </div>
     </main>
     <script src="elastic.js" charset="utf-8">init()</script>

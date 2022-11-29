@@ -158,69 +158,61 @@ aside.side-panel {
   background: #E6E6E6;
 }
 
-div.user-trip-histories {
-  /*  */
-  background: #a1a1a1;
-  margin: 22% 0;
-  height: inherit;
-}
+div.trip-details-conditions {height: 80%;margin: 1em 5%;padding: 3em 5%;}
 
-div.history-list {
+div.planner-label-placer {
   /*  */
-  height: 100%;
+  height: 80px;
   align-items: center;
+  padding: 8px;
 }
 
-div.trip-details {
+div.planner-label-placer h3 {
   /*  */
-  user-select: none;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 2em 5%;
+  font-weight: bolder;
 }
 
-ul.trip-list {
+form.travel-plan-letter {
   /*  */
-  height: 100%;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-}
-
-ul.trip-list li {
-  /*  */
-  background: #cbcbcb;
-  margin: 1px;
-  padding: 4px;
-  border: 1px solid #666;
-  border-radius: 2px;
-}
-
-ul.trip-list li:hover, ul.trip-list li:focus,
-ul.trip-list li:active {
-  /*  */
-  background: #b8b8b8;
-}
-
-div.trip-destinations-details, div.trip-date-details {
-  margin: 2px;
   display: flex;
-  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1pc;
+  margin: 2em 2%;
 }
 
-div.trip-destinations-details {
-  /*  */
-  padding: 2px;
-}
 
-div.destination-detail, div.trip-destinations-details span {
+form.travel-plan-letter input[type=search] {
   /*  */
   margin: 2px;
-  font-size: 1.2pc;
+  width: 18em;
+  height: 1.8pc;
+  font-size: 0.6em;
 }
 
-div.trip-date-details {
+form.travel-plan-letter input[name='cancel'] {
   /*  */
-  margin: 0.8em 2em;
+  font-size: 1pc;
+  font-weight: bold;
+  padding: 4px;
+  border: 2px solid #db0000;
+  font-weight: 500;
+  background: red;
+  border-radius: 3px;
+  color: #fff;
 }
+
+form.travel-plan-letter input[name='cancel']:hover, form.travel-plan-letter input[name='cancel']:focus,
+form.travel-plan-letter input[name='cancel']:active {
+  /*  */
+  background: #d50000;
+  color: #f2f2f2;
+}
+
 
 @media only screen and (max-width: 750px) {
   /* Breakpoint caso a tela ficar menor que 750px (tablet) */

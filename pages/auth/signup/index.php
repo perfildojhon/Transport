@@ -5,7 +5,7 @@
 	  <meta http-equiv="refresh" content="">
 	  <title>Formulário de Login e Registro com HTML5 e CSS3</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="stylesheet" type="text/css" href="source/css/login.css" />
+	  <link rel="stylesheet" type="text/css" href="/common/source/css/auth.css">
 	</head>
 
 	<body>
@@ -16,11 +16,10 @@
 				<a class="links" id="paralogin"></a>
 		  <?php
 			  //Iniciar  Sessão
-			  session_start();
+			  //session_start();
 
 			  if(isset($_POST['Cadastrar'])):
-
-				echo '<script>console.log("conectado")</script>';
+				echo "<p>entrou!</p>";
 
 				//Conexão
 				require_once 'conexaoBanco.php';
@@ -36,9 +35,9 @@
 
 				$senha = md5($senha);
 
-				$sql= "INSERT INTO usuario(nomUser,dateNascm,dscEmail,numCPF,sobrenomeUser,dscRaschSenhas,dscEndereco) VALUES ('$nome','$dataDeNascimento','$email','$CPF','$sobrenome','$senha','$endereco')";
+				$sql= "INSERT INTO usuario(nomUser,dateNascm,dscEmail,numCPF,sobrenome,dscRaschSenhas,endereco) VALUES ('$nome','$dataDeNascimento','$email','$CPF','$sobrenome','$senha','$endereco')";
 
-				if(mysqli_query($connect, $sql)):
+				if(mysqli_query($connect,$sql)):
 				  echo "Sucesso";
 				else:
 				  echo "Erro !";
@@ -104,7 +103,7 @@
 
 			  <p class="link">
 				Já tem conta?
-				<a href="index.php"> Ir para Login </a>
+				<a href="/auth"> Ir para Login </a>
 			  </p>
 			</form>
 
