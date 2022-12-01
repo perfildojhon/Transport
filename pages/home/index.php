@@ -68,12 +68,55 @@
           <div class="trip-conditions">
             <form class="travel-plan-letter" action="index.html" method="post">
 
-                  <label for="trip-start-condition">Partida</label>
-                  <input id="trip-start-condition" type="search" name="search" placeholder="Pra onde você quer ir?">
+                  <!--<label for="trip-start-condition">Partida</label>
+                  <input id="trip-start-condition" type="search" name="search" placeholder="Pra onde você quer ir?">-->
                   <br>
-                  <label for="trip-arrival-condition">Destino</label>
-                  <input id="trip-arrival-condition" type="search" name="search" placeholder="Em qual destino quer chegar?" >
+                  
+                  <?php
+                  include('../../pages/auth/connection/index.php');
+                  $sql = "select nomPonto FROM pontos";
+                 
+                  //Executa a query
+                  $stmt = $connection->query($sql);
+                  $conta= $stmt->rowCount();
 
+                  //Retorna a tabela
+                  $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                      
+                  ?>    
+
+                  <!--<label for="trip-start-condition">Partida</label>
+                  <input list="browsers" type= "search" name="search" id="trip-start-condition" placeholder="Pra onde você quer ir?">-->
+
+                  <datalist id="partida">
+                      <?php
+                          foreach($dados as $linha ){                            
+                            echo '<option value='.$linha['nomPonto'].'>';
+                          }
+                      ?>
+                    </datalist>  
+
+                    <label for="trip-arrival-condition">Partida</label>
+                    <input list="partida" type= "search" name="search" id="trip-arrival-condition" placeholder="Em qual destino quer chegar?">
+                  <br>  
+
+                  <datalist id="destino">
+                      <?php
+                          foreach($dados as $linha ){                            
+                            echo '<option value='.$linha['nomPonto'].'>';
+                          }
+                      ?>
+                    </datalist>  
+
+                    <label for="trip-arrival-condition">Destino</label>
+                    <input list="destino" type= "search" name="search" id="trip-arrival-condition" placeholder="Em qual destino quer chegar?">
+                  <br>    
+
+                  <!-- <label for="trip-arrival-condition">Destino</label>
+                  <input id="trip-arrival-condition" type="search" name="search" placeholder="Em qual destino quer chegar?" >-->
+                  
+                  
+                  
                   <input id="submit-trip" type="submit" name="confirm" value="confirmar">
 
                   <input id="cancel-trip" type="button" name="cancel" value="cancelar">

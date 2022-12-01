@@ -55,12 +55,6 @@ session_start();
     </header>
     <main>
       <!--  -->
-      <?php
-      if(isset($_SESSION['msg'])){
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
-      }
-      ?>
       <article class="dashboard">
         <!--  -->
         <div class="transfer">
@@ -69,6 +63,14 @@ session_start();
             <h1 id="titulo">Atualizar Rotas</h1>
             <p id="subtitulo">Exporte os arquivos de rotas e pontos para o banco de dados</p>
             <br>
+            <div class="resposta">
+              <?php
+                if(isset($_SESSION['msg'])){
+                  echo $_SESSION['msg'];
+                  unset($_SESSION['msg']);
+                }
+              ?>
+            </div>
           </div>
           <!--  -->
           <nav class="select-mode">
@@ -85,20 +87,25 @@ session_start();
               </li>
             </ul>
           </nav>
-          <form class="as_stops" method="POST" action="processaPontos.php" enctype="multipart/form-data">
+          <form class="as_stops" method="POST" action="source/processaRotas.php" enctype="multipart/form-data">
             <!--  -->
             <fieldset id="input_rotas" hidden>
               <label class="nome"><strong>Exporte arquivo de "ROTAS"</strong></label>
               <input type="file" name="arquivo" id="nome">
+              <input class="import_file_rotas" name="arquivo" type="submit" value="Importar" onclick="importFile()">
             </fieldset>
+            <!--  -->
+
+          </form>
+          <form class="as_stops" method="POST" action="source/processaPontos.php" enctype="multipart/form-data">
             <!--  -->
             <fieldset id="input_pontos" hidden>
               <label for="arquivo" class="nome"><strong>Exporte arquivo de "PONTOS"</strong></label>
               <input type="file" name="arquivo" id="nome"><br><br>
+              <input class="import_file_pontos" name="arquivo" type="submit" value="Importar" onclick="importFile()">
+
             </fieldset>
-            <fieldset id="send_file">
-              <input class="botao" type="submit" value="Importar">
-            </fieldset>
+            
           </form>
         </div>
       </article>
@@ -106,5 +113,7 @@ session_start();
     <script src="/common/source/js/elastic.js" charset="utf-8">init()</script>
   </body>
   <script src="source/js/alternator.js" charset="utf-8"></script>
+  <script src="source/js/update_data.js" charset="utf-8"></script>
+
 </html>
 <style>
