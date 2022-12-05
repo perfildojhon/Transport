@@ -1,72 +1,54 @@
-aside.side-panel {
-  /*  */
-  width: 30vw;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0; */
-  background: #E6E6E6;
-}
-
 div.user-trip-histories {
   /*  */
-  background: #a1a1a1;
-  margin: 22% 0;
   height: inherit;
+  position: relative;
+  top: 60px;
 }
 
-div.history-list {
-  /*  */
-  height: 100%;
-  align-items: center;
-  position: fixed;
+div.trip-label-placer {
+  height: 2em;
+  padding: 2em 6%;
 }
 
-div.trip-details {
+div.trip-label-placer h3 {
   /*  */
+  font-size: 1.2em;
+  font-weight: bolder;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
-ul.trip-list {
+ul li {
   /*  */
-  height: 100%;
-}
-
-ul.trip-list li {
-  /*  */
-  background: #cbcbcb;
-  margin: 1px;
-  padding: 4px;
+  border-radius: 4px;
+  background: #f2f2f2;
   border: 1px solid #666;
-  border-radius: 2px;
-}
-
-ul.trip-list li:hover, ul.trip-list li:focus,
-ul.trip-list li:active {
-  /*  */
-  background: #b8b8b8;
-}
-
-div.trip-destinations-details, div.trip-date-details {
   margin: 2px;
-  display: flex;
-  gap: 4px;
+  height: 4em;
+  padding: 1em;
+  font-weight: bolder;
+  color: #333;
 }
 
-div.trip-destinations-details {
+li#trip:hover, li#trip:focus, li#active {
   /*  */
-  padding: 2px;
+  box-shadow:
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
 }
 
-div.destination-detail, div.trip-destinations-details span {
+div.trip-date-time p {
   /*  */
-  margin: 2px;
-  font-size: 1.2pc;
+  padding: 0.5em 0;
 }
 
-div.trip-date-details {
+div.trip-destinations-details p {
   /*  */
-  margin: 0.8em 2em;
+  height: 1em;
+  padding: 1em 4px;
+  font-size: 0.8em;
 }
 
 @media only screen and (max-width: 750px) {

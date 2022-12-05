@@ -54,185 +54,19 @@
           </div>
           <div class="trip-history-list">
             <div class="history-list">
-            <ul class="trip-list">
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
+              <ul class="list">
+                <li class="trip" id="trip">
+                  <div class="trip-details">
+                    <div class="trip-date-time">
+                      <p>{datetime}</p>
                     </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
+                    <div class="trip-destinations-details">
+                      <p>{destinations}</p>
                     </div>
                   </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="trip-details">
-                <div class="trip-detail-inline">
-                  <div class="trip-destinations-details">
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Partida}</h2>
-                    </div>
-                    <span> para </span>
-                    <div class="destination-detail trip-origin-data">
-                      <h2>{Destino}</h2>
-                    </div>
-                  </div>
-                  <div class="trip-date-details">
-                    <div class="date-detail trip-data-information">
-                      <h2>{datetime}</h2>
-                    </div>
-                    <span> as </span>
-                    <div class="date-detail trip-time-information">
-                      <h2>{time}</h2>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </aside>
@@ -242,5 +76,6 @@
       </div>
     </main>
     <script src="elastic.js" charset="utf-8">init()</script>
+    <script src="source/js/list.js" charset="utf-8">init()</script>
   </body>
 </html>

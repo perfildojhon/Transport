@@ -1,3 +1,8 @@
 /database
 pages/auth/connection/env/variables.php
 pages/common/media/profile3.bmp
+node_modules
+phpMyAdmin
+logs/
+package-lock.json
+package.json
